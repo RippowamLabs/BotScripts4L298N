@@ -45,6 +45,8 @@ void loop()
 
   Serial.println("cm");
   if( uS > 100 && uS < 935 ){
+    goBackward();
+    delay(1000);
     takeLeft();
     digitalWrite(LED,HIGH);
     delay(1000);
