@@ -33,59 +33,71 @@ void loop()
 
 void takeLeft()
 {
-  digitalWrite(in1, LOW);
-  digitalWrite(in2, HIGH);   
-  // set speed to 200 out of possible range 0~255
-  analogWrite(enA, 200);
-   digitalWrite(in3, LOW);
-  digitalWrite(in4, HIGH);
    // set speed to 200 out of possible range 0~255
   analogWrite(enB, 75);
+  // set speed to 200 out of possible range 0~255
+  analogWrite(enA, 200);
+  
+  //set direction
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, HIGH);
+   
+  //set direction
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);  
   
   delay(500);
 }
 
 void takeRight()
 {
-     digitalWrite(in1, LOW);
-  digitalWrite(in2, HIGH);  
   // set speed to 200 out of possible range 0~255
   analogWrite(enA, 75);
-   
-    digitalWrite(in3, LOW);
-  digitalWrite(in4, HIGH);
-   // set speed to 200 out of possible range 0~255
+  // set speed to 200 out of possible range 0~255
   analogWrite(enB, 200);
   
+  //set direction
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);  
+    
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, HIGH);
+   
   delay(500);
 }
 
 void goStraight()
 {
-     digitalWrite(in1, LOW);
-  digitalWrite(in2, HIGH);
+  
   // set speed to 200 out of possible range 0~255
   analogWrite(enA, 200);
+  // set speed to 200 out of possible range 0~255
+  analogWrite(enB, 200);
+  
+  //set direction
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);
+  
   // turn on motor B
   digitalWrite(in3, LOW);
   digitalWrite(in4, HIGH);
-  // set speed to 200 out of possible range 0~255
-  analogWrite(enB, 200);
   
   delay(2000);
 }
 
 void goBackward()
 {
-   digitalWrite(in1, HIGH);
-  digitalWrite(in2, LOW);
-  // set speed to 200 out of possible range 0~255
-  analogWrite(enA, 200);
-  // turn on motor B
-  digitalWrite(in3, HIGH);
-  digitalWrite(in4, LOW);
   // set speed to 200 out of possible range 0~255
   analogWrite(enB, 200);
+  // set speed to 200 out of possible range 0~255
+  analogWrite(enA, 200);
+  
+  //set direction
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);
+    
+  digitalWrite(in3, HIGH);
+  digitalWrite(in4, LOW);
   
   delay(2000);
 }
